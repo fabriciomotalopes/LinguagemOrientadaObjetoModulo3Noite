@@ -2,9 +2,9 @@ package br.com.livraria.model;
 
 public class Autor {
 
-    public String nome;
-    public String email;
-    public String cpf;
+    private String nome;
+    private String email;
+   private String cpf;
 
     public void mostrarDetalhes() {
 
@@ -14,5 +14,31 @@ public class Autor {
         System.out.println("CPF: " + cpf);
 
     }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+    
+    
 
 }

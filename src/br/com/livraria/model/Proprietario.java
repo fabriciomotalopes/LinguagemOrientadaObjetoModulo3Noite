@@ -2,9 +2,9 @@ package br.com.livraria.model;
 
 public class Proprietario {
 
-    public String nome;
-    public String cnh;
-    public String endereco;
+    private String nome;
+    private String cnh;
+    private String endereco;
 
     public void mostrarDetalhes() {
 
@@ -14,4 +14,30 @@ public class Proprietario {
         System.out.println("Endereço: " + endereco);
 
     }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCnh() {
+        return cnh;
+    }
+
+    public void setCnh(String cnh) {
+        this.cnh = cnh;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+    
+    
 }

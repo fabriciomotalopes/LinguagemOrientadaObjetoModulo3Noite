@@ -9,17 +9,16 @@ public class CadastroDeLivros {
 
         Autor autor = new Autor();
 
-        autor.nome = "Fabricio Lopes";
-        autor.email = "fabricio@fabricio.com.br";
-        autor.cpf = "000.000.000-00";
+        autor.setNome("Fabricio Lopes");
+        autor.setEmail("fabricio@fabricio.com.br");
+        autor.setCpf("000.000.000-00");
 
-        Livro livro = new Livro();
+        Livro livro = new Livro(autor);
 
-        livro.nome = "Java 8 na Prática.";
-        livro.descricao = "Novos recursos da linguagem.";
-        livro.valor = 59.90;
-        livro.isbn = "000-00-00000-00-0";
-        livro.autor = autor;
+        livro.setNome("Java 8 na Prática.");
+        livro.setDescricao("Novos recursos da linguagem.");
+        livro.setValor(59.90);
+        //livro.setIsbn("000-00-00000-00-0");
         
         livro.aplicaDescontoDe(0.2);
 
@@ -27,17 +26,16 @@ public class CadastroDeLivros {
 
         Autor outroAutor = new Autor();
 
-        outroAutor.nome = "Fernando Mota";
-        outroAutor.email = "fernando@fernando.com.br";
-        outroAutor.cpf = "111.111.111-11";
+        outroAutor.setNome("Fernando Mota");
+        outroAutor.setEmail("fernando@fernando.com.br");
+        outroAutor.setCpf("111.111.111-11");
 
-        Livro outroLivro = new Livro();
+        Livro outroLivro = new Livro(outroAutor);
 
-        outroLivro.nome = "Lógica de Programação";
-        outroLivro.descricao = "Crie seus primeiros programas";
-        outroLivro.valor = 59.90;
-        outroLivro.isbn = "111-11-11111-11-1";
-        outroLivro.autor = outroAutor;
+        outroLivro.setNome("Lógica de Programação");
+        outroLivro.setDescricao("Crie seus primeiros programas");
+        outroLivro.setValor(59.90);
+        outroLivro.setIsbn("111-11-11111-11-1");
         
         outroLivro.aplicaDescontoDe(0.1);
         

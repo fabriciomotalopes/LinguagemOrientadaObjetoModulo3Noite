@@ -1,20 +1,24 @@
 package br.com.livraria.model;
 
 public class Livro {
-    
-    public Livro(){
-        System.out.println("Criando um Livro");
+
+    public Livro(Autor autor) {
+        this.isbn = "999-99-99999-99-9";
+        this.autor = autor;
     }
 
-    public String nome;
-    public String descricao;
-    public double valor;
-    public String isbn;
+    private String nome;
+    private String descricao;
+    private double valor;
+    private String isbn;
+    private Autor autor;
 
-    public Autor autor;
-
-    public void aplicaDescontoDe(double porcentagem) {
+    public boolean aplicaDescontoDe(double porcentagem) {
+        if (porcentagem > 0.3) {
+            return false;
+        }
         this.valor = this.valor - (this.valor * porcentagem);
+        return true;
     }
 
     public boolean temAutor() {
@@ -34,6 +38,46 @@ public class Livro {
         }
         System.out.println("--------------------------------------------");
 
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+
+    public Autor getAutor() {
+        return autor;
+    }
+
+    public void setAutor(Autor autor) {
+        this.autor = autor;
     }
 
 }
