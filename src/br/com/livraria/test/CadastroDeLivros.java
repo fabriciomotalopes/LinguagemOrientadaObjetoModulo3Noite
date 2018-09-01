@@ -1,6 +1,7 @@
 package br.com.livraria.test;
 
 import br.com.livraria.model.Autor;
+import br.com.livraria.model.Ebook;
 import br.com.livraria.model.Livro;
 
 public class CadastroDeLivros {
@@ -40,6 +41,15 @@ public class CadastroDeLivros {
         outroLivro.aplicaDescontoDe(0.1);
         
         outroLivro.mostrarDetalhes();
+        
+        
+        Ebook ebook = new Ebook(outroAutor);
+        ebook.setWaterMark("Testes");
+        ebook.setNome("Zezinho");
+        ebook.setValor(100.00);
+        ebook.aplicaDescontoDe(0.30);
+        
+        ebook.mostrarDetalhes();
 
     }
 }

@@ -1,4 +1,4 @@
-package br.com.livraria.model;
+package br.com.automovel.model;
 
 public class Proprietario {
 

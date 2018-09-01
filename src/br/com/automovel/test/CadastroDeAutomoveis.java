@@ -1,7 +1,7 @@
-package br.com.livraria.test;
+package br.com.automovel.test;
 
-import br.com.livraria.model.Automovel;
-import br.com.livraria.model.Proprietario;
+import br.com.automovel.model.Automovel;
+import br.com.automovel.model.Proprietario;
 
 public class CadastroDeAutomoveis {
 
@@ -13,7 +13,7 @@ public class CadastroDeAutomoveis {
         proprietario.setCnh("123456789");
         proprietario.setEndereco("Rua do Topografo, 68");
 
-        Automovel automovel = new Automovel();
+        Automovel automovel = new Automovel(proprietario);
 
         automovel.setMarca("Fiat");
         automovel.setModelo("Uno");
@@ -32,7 +32,7 @@ public class CadastroDeAutomoveis {
         outroProprietario.setCnh("123456987");
         outroProprietario.setEndereco("Rua Jose Marciano Pinto, 100");
 
-        Automovel outroAutomovel = new Automovel();
+        Automovel outroAutomovel = new Automovel(proprietario);
 
         outroAutomovel.setMarca("Toyota");
         outroAutomovel.setModelo("Hilux");

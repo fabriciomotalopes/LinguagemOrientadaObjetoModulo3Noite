@@ -1,9 +1,10 @@
-package br.com.livraria.model;
+package br.com.automovel.model;
 
 public class Automovel {
     
-    public Automovel() {
-        System.out.println("Criando um Automóvel");
+    public Automovel(Proprietario proprietario) {
+        this.cor = "Branco";
+        this.proprietario = proprietario;
     }
 
     private String marca;
