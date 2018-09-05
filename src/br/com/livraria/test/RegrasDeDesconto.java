@@ -1,6 +1,7 @@
 package br.com.livraria.test;
 
 import br.com.livraria.model.Autor;
+import br.com.livraria.model.Ebook;
 import br.com.livraria.model.Livro;
 
 public class RegrasDeDesconto {
@@ -22,6 +23,17 @@ public class RegrasDeDesconto {
             System.out.println("O desconto e maior que 30%");
         } else {
             System.out.println("Valor com Desconto: " + livro.getValor());
+        }
+        
+        Ebook ebook = new Ebook(autor);
+        ebook.setValor(59.90);
+        
+        System.out.println("Valor sem Desconto: " + ebook.getValor());
+
+        if (!ebook.aplicaDescontoDe(0.2)) {
+            System.out.println("O desconto e maior que 15%");
+        } else {
+            System.out.println("Valor com Desconto: " + ebook.getValor());
         }
 
     }
