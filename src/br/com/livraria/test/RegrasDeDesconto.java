@@ -3,6 +3,8 @@ package br.com.livraria.test;
 import br.com.livraria.model.Autor;
 import br.com.livraria.model.Ebook;
 import br.com.livraria.model.Livro;
+import br.com.livraria.model.LivroFisico;
+import br.com.livraria.model.MiniLivro;
 
 public class RegrasDeDesconto {
 
@@ -14,7 +16,7 @@ public class RegrasDeDesconto {
         autor.setEmail("fabricio@fabricio.com.br");
         autor.setCpf("000.000.000-00");
 
-        Livro livro = new Livro(autor);
+        Livro livro = new LivroFisico(autor);
         livro.setValor(59.90);
 
         System.out.println("Valor sem Desconto: " + livro.getValor());
@@ -34,6 +36,17 @@ public class RegrasDeDesconto {
             System.out.println("O desconto e maior que 15%");
         } else {
             System.out.println("Valor com Desconto: " + ebook.getValor());
+        }
+        
+        MiniLivro miniLivro = new MiniLivro(autor);
+        miniLivro.setValor(59.90);
+        
+        System.out.println("Valor sem Desconto: " + miniLivro.getValor());
+
+        if (!miniLivro.aplicaDescontoDe(0.1)) {
+            System.out.println("o mini livro não tem desconto");
+        } else {
+            System.out.println("Valor com Desconto: " + miniLivro.getValor());
         }
 
     }

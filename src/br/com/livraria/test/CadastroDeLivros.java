@@ -1,7 +1,9 @@
 package br.com.livraria.test;
 
 import br.com.livraria.model.Autor;
+import br.com.livraria.model.Ebook;
 import br.com.livraria.model.Livro;
+import br.com.livraria.model.LivroFisico;
 
 public class CadastroDeLivros {
 
@@ -13,7 +15,7 @@ public class CadastroDeLivros {
         autor.setEmail("fabricio@fabricio.com.br");
         autor.setCpf("000.000.000-00");
 
-        Livro livro = new Livro(autor);
+        Livro livro = new LivroFisico(autor);
 
         livro.setNome("Java 8 na Prática.");
         livro.setDescricao("Novos recursos da linguagem.");
@@ -30,7 +32,7 @@ public class CadastroDeLivros {
         outroAutor.setEmail("fernando@fernando.com.br");
         outroAutor.setCpf("111.111.111-11");
 
-        Livro outroLivro = new Livro(outroAutor);
+        Livro outroLivro = new Ebook(outroAutor);
 
         outroLivro.setNome("Lógica de Programação");
         outroLivro.setDescricao("Crie seus primeiros programas");

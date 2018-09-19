@@ -1,6 +1,6 @@
 package br.com.livraria.model;
 
-public class Livro {
+public abstract class Livro {
 
     public Livro(Autor autor) {
         this.isbn = "999-99-99999-99-9";
@@ -13,13 +13,7 @@ public class Livro {
     private String isbn;
     private Autor autor;
 
-    public boolean aplicaDescontoDe(double porcentagem) {
-        if (porcentagem > 0.3) {
-            return false;
-        }
-        this.valor = this.valor - (this.valor * porcentagem);
-        return true;
-    }
+    public abstract boolean aplicaDescontoDe(double porcentagem);
 
     public boolean temAutor() {
         return this.autor != null;
